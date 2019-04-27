@@ -1,0 +1,90 @@
+.supportSection {
+  background-color: #3858ad;
+  width: 333px;
+}
+
+.supportedBy {
+  color: white;
+  font: normal 12px Helvetica Neue, sans-serif;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+.pic {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.username {
+  color: white;
+  font: 500 normal 12px Helvetica Neue, sans-serif;
+  padding-right: 0.2em;
+  text-decoration: none;
+}
+.username:hover {
+  text-decoration: underline;
+}
+.commentBlock {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 35px;
+  padding-bottom: 15px;
+}
+.comment {
+  color: white;
+  font-size: 12px;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.more {
+  color: #6591e2;
+  font:normal 12px Helvetica Neue, sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.more:hover {
+  text-decoration: underline;
+}
+
+.thumbnails {
+  margin-top: 10px;
+}
+
+.thumbnail {
+  margin: 0 3px 7px 4px;
+}
+
+.thumbnail span {
+  padding: 0.2em;
+  height: 115px;
+  width: 100px;
+  position: absolute;
+  visibility: hidden;
+  color: white;
+  font: 400 normal 10px Helvetica Neue, sans-serif;
+  text-decoration: none;
+  background-color: black;
+  text-align: center;
+}
+
+.thumbnail:hover, .thumbnail:hover span {
+  height: 115px;
+  width: 100px;
+  margin: 0, 0, 0, 0;
+  visibility: visible;
+}
+
+.thumbnails > :first-child {
+  margin: 0 3px 7px 0px;
+}
+
+.thumbnails > :nth-child(11) {
+  margin: 0 3px 7px 0px;
+}
+
+.thumbnails > :nth-child(11) span {
+  display: flex;
+  flex-flow: column;
+}
