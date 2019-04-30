@@ -3,7 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 1337;
 const request = require('request');
 const asyncRequest = require('./async-request');
 const parser = require('body-parser');
@@ -16,7 +16,7 @@ app.use('/:id', express.static(path.join(__dirname, 'public')));
 
 app.get('/support/:id', async (req, res) => {
   const albumId = req.params.id;
-  const supportData = await asyncRequest.get(`http://localhost:3003/support/${albumId}`);
+  const supportData = await asyncRequest.get(`http://ec2-54-202-150-213.us-west-2.compute.amazonaws.com:3000/support/${albumId}`);
   res.send(supportData);
 })
 
@@ -24,7 +24,7 @@ app.post('/support', async (req, res) => {
   const commentsData = req.body;
   const supportData = await asyncRequest.post({
     headers: {'content-type': 'application/json'},
-    url: 'http://localhost:3003/support',
+    url: 'http://ec2-54-202-150-213.us-west-2.compute.amazonaws.com:3000/support',
     form: commentsData
 });
   res.send(supportData);
